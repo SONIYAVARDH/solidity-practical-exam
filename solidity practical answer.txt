@@ -1,0 +1,63 @@
+Ans 1.) solidity is a statically typed language, solidity is designed for developing smart contracts that run on Ehtereum virtual machine(EVM).
+        The important factors that makes solidity so special:
+        1. Functional :- solidity language is used for smart contract. this is mostly used for money related needs such as crowdfunding,aution and wallets. we can create also other application like voting.
+        2. Flexible :- you can use a Remix- online complier or downlaod a command-line compiler on your PC to write a smart contract.
+        3. Promising :-  all kind of  business use blockchain that puts skilled solidity developer in high demand.
+        4. Improving :- solidity language updates such as a new featurs and  bug fixes.
+
+Ans.2) Smart Contract for understanding State Variables in solidity programming language-
+       we will create state variable outside the function. we use fuction- setmynumber , resetmy number ,getmynumber and getmynumberplusone.
+       
+       //SPDX-License-Identifier : MIT
+pragma solidity ^0.8.13;
+
+contract StateVariables
+{
+    // deaclear a state variable
+    uint public mynumber;
+
+    function setmynumber(uint _mynumber) external 
+    {
+       mynumber = _mynumber;
+    }
+    function resetmynumber() external 
+    {
+        mynumber = 0;
+    }
+    function getmynumber() external view returns(uint)
+    {
+        return mynumber;
+    }
+    function getmynumberplusone() external view returns(uint)
+    {
+        return mynumber + 1;
+    }
+
+}
+
+
+Ans.3) Smart Contract for understanding Local Variables- we create a Local Variables inside the function. we are using uint,bool and address datatype.
+       
+
+     // SPDX-License-Identifier : MIT
+pragma solidity ^0.8.13;
+
+contract LocalVariables
+{
+    uint public firstvariable;
+    bool public secondvariable;
+    address public myaddress;
+
+function localvariable() external
+{
+    uint Mynumber = 123;
+    bool Myboolean  = false;
+
+    Mynumber = Mynumber + 123;
+    Myboolean = true;
+
+    firstvariable = 123;
+    secondvariable = true;
+    myaddress = address(1);
+}
+}
